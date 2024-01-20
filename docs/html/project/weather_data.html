@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>project.weather_data API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<style>.homelink{display:block;font-size:1em;font-weight:bold;padding-bottom:.5em;padding-top:.5em;border-bottom:1px solid silver}.homelink:hover{color:inherit}.homelink img{width:100%;margin:auto;margin-bottom:.3em}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>project.weather_data</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import sys
+from datetime import datetime
+import httpx
+from project.prediction_model import WeatherModel
+
+
+class WeatherData:
+    &#34;&#34;&#34;
+    This class is used to get weather data from an API and parse it into a JSON format.
+    It provides methods to retrieve various weather information such as current weather, predicted temperature,
+    daily weather, and more.
+    &#34;&#34;&#34;
+
+    API_URL = (&#39;https://api.open-meteo.com/v1/forecast?latitude=47.0667&amp;longitude=15.45&amp;current=temperature_2m,&#39;
+               &#39;relativehumidity_2m,apparent_temperature,weathercode,surface_pressure,&#39;
+               &#39;windspeed_10m&amp;hourly=visibility&amp;daily=weathercode,temperature_2m_max,temperature_2m_min,&#39;
+               &#39;apparent_temperature_max,apparent_temperature_min,sunrise,sunset,uv_index_max&amp;timezone=Europe%2FBerlin&#39;)
+    WEATHER_JSON = None
+
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initializes the WeatherData object by fetching weather data from the API and storing it as JSON.
+        If the API request fails, the program exits with an error message.
+        &#34;&#34;&#34;
+        weather_data = httpx.get(self.API_URL)
+        self.forecast_model = WeatherModel()
+
+        if weather_data.status_code == 200:
+            self.WEATHER_JSON = weather_data.json()
+        else:
+            sys.exit(&#34;Error: Could not get weather data from API&#34;)
+
+    def get_units(self):
+        &#34;&#34;&#34;
+        Retrieves the units of measurement for the weather data from the API.
+
+        Returns:
+            dict: A dictionary containing the units of measurement.
+        &#34;&#34;&#34;
+        units = self.WEATHER_JSON[&#39;current_units&#39;]
+        visibility = self.WEATHER_JSON[&#39;hourly_units&#39;][&#39;visibility&#39;]
+        units[&#39;visibility&#39;] = visibility
+        return units
+
+    def find_closest_time_index(self):
+        &#34;&#34;&#34;
+        Finds the index of the closest time in the API data to the current time.
+
+        Returns:
+            int: The index of the closest time.
+        &#34;&#34;&#34;
+        current_datetime = datetime.now()
+        json_dates = [datetime.fromisoformat(date) for date in self.WEATHER_JSON[&#39;hourly&#39;][&#39;time&#39;]]
+        time_diffs = [abs(date - current_datetime) for date in json_dates]
+
+        return time_diffs.index(min(time_diffs))
+
+    def get_current_visibility(self):
+        &#34;&#34;&#34;
+        Retrieves the current visibility from the API data.
+
+        Returns:
+            float: The current visibility in kilometers.
+        &#34;&#34;&#34;
+        return self.WEATHER_JSON[&#39;hourly&#39;][&#39;visibility&#39;][self.find_closest_time_index()] / 1000
+
+    def get_predicted_temp(self):
+        &#34;&#34;&#34;
+        Predicts the temperature for the current day using a machine learning model.
+
+        Returns:
+            float: The predicted temperature.
+        &#34;&#34;&#34;
+        max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_max&#39;][0]
+        min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_min&#39;][0]
+
+        apparent_max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_max&#39;][0]
+        apparent_min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_min&#39;][0]
+
+        uv_index = self.WEATHER_JSON[&#39;daily&#39;][&#39;uv_index_max&#39;][0]
+
+        return self.forecast_model.predict(
+            max_temp, min_temp, uv_index, apparent_max_temp, apparent_min_temp
+        )
+
+    def get_current_weather(self):
+        &#34;&#34;&#34;
+        Retrieves the current weather data.
+
+        Returns:
+            dict: A dictionary containing the current weather information.
+        &#34;&#34;&#34;
+        current_weather = self.WEATHER_JSON[&#39;current&#39;]
+        weather_units = self.get_units()
+
+        sunrise_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunrise&#39;][0]).strftime(&#39;%H:%M&#39;)
+        sunset_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunset&#39;][0]).strftime(&#39;%H:%M&#39;)
+
+        return {
+            &#34;temperature&#34;: str(round(current_weather[&#34;temperature_2m&#34;], 1))
+                           + &#39; &#39;
+                           + weather_units[&#34;temperature_2m&#34;],
+            &#34;predicted_temp&#34;: self.get_predicted_temp(),
+            &#34;humidity&#34;: str(current_weather[&#34;relativehumidity_2m&#34;])
+                        + &#39; &#39;
+                        + weather_units[&#34;relativehumidity_2m&#34;],
+            &#34;feels_like&#34;: str(round(current_weather[&#34;apparent_temperature&#34;], 1))
+                          + &#39; &#39;
+                          + weather_units[&#34;apparent_temperature&#34;],
+            &#34;weathercode&#34;: current_weather[&#34;weathercode&#34;],
+            &#34;pressure&#34;: str(current_weather[&#34;surface_pressure&#34;])
+                        + &#39; &#39;
+                        + weather_units[&#34;surface_pressure&#34;],
+            &#34;windspeed&#34;: str(current_weather[&#34;windspeed_10m&#34;])
+                         + &#39; &#39;
+                         + weather_units[&#34;windspeed_10m&#34;],
+            &#34;visibility&#34;: f&#39;{str(self.get_current_visibility())} k&#39;
+                          + weather_units[&#34;visibility&#34;],
+            &#34;sunrise&#34;: sunrise_time,
+            &#34;sunset&#34;: sunset_time,
+        }
+
+    def get_daily_weather(self, day):
+        &#34;&#34;&#34;
+        Retrieves the weather data for a specific day.
+
+        Parameters:
+            day (int): The index of the day.
+
+        Returns:
+            dict: A dictionary containing the weather information for the specified day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        avg_temp = (day_weather[&#34;temperature_2m_min&#34;][day] + day_weather[&#34;temperature_2m_max&#34;][day]) / 2
+        avg_feels = (day_weather[&#34;apparent_temperature_min&#34;][day] + day_weather[&#34;apparent_temperature_max&#34;][day]) / 2
+
+        predicted_temp = self.forecast_model.predict(
+            day_weather[&#34;temperature_2m_max&#34;][day],
+            day_weather[&#34;temperature_2m_min&#34;][day],
+            day_weather[&#34;uv_index_max&#34;][day],
+            day_weather[&#34;apparent_temperature_max&#34;][day],
+            day_weather[&#34;apparent_temperature_min&#34;][day]
+        )
+        return {
+            &#34;day_name&#34;: datetime.strptime(
+                day_weather[&#34;time&#34;][day], &#34;%Y-%m-%d&#34;
+            ).strftime(&#34;%A&#34;),
+            &#34;weathercode&#34;: day_weather[&#34;weathercode&#34;][day],
+            &#34;temperature&#34;: str(round(avg_temp, 2)),
+            &#34;predicted_temp&#34;: predicted_temp,
+            &#34;feels_like&#34;: str(round(avg_feels, 2)),
+        }
+
+    def get_daily_temperature(self):
+        &#34;&#34;&#34;
+        Retrieves the average temperature for the next 7 days.
+
+        Returns:
+            list: A list of average temperatures for each day.
+        &#34;&#34;&#34;
+        return self.format_temp_average(
+            &#34;temperature_2m_min&#34;, &#34;temperature_2m_max&#34;
+        )
+
+    def get_daily_feels_temp(self):
+        &#34;&#34;&#34;
+        Retrieves the average feels like temperature for the next 7 days.
+
+        Returns:
+            list: A list of average feels like temperatures for each day.
+        &#34;&#34;&#34;
+        return self.format_temp_average(
+            &#34;apparent_temperature_min&#34;, &#34;apparent_temperature_max&#34;
+        )
+
+    def format_temp_average(self, arg0, arg1):
+        &#34;&#34;&#34;
+        Formats the average temperature for a given range of days.
+
+        Parameters:
+            arg0 (str): The first parameter for calculating the average temperature.
+            arg1 (str): The second parameter for calculating the average temperature.
+
+        Returns:
+            list: A list of average temperatures for each day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        weekly_temperatures = []
+        for day in range(7):
+            avg_temp = (day_weather[arg0][day] + day_weather[arg1][day]) / 2
+            weekly_temperatures.append(round(avg_temp, 2))
+        return weekly_temperatures
+
+    def get_daily_predicted_temp(self):
+        &#34;&#34;&#34;
+        Retrieves the predicted temperature for the next 7 days.
+
+        Returns:
+            list: A list of predicted temperatures for each day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        weekly_temperatures = []
+
+        for day in range(7):
+            predicted_temp = self.forecast_model.predict(
+                day_weather[&#34;temperature_2m_max&#34;][day],
+                day_weather[&#34;temperature_2m_min&#34;][day],
+                day_weather[&#34;uv_index_max&#34;][day],
+                day_weather[&#34;apparent_temperature_max&#34;][day],
+                day_weather[&#34;apparent_temperature_min&#34;][day]
+            )
+            weekly_temperatures.append(predicted_temp)
+        return weekly_temperatures</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="project.weather_data.WeatherData"><code class="flex name class">
+<span>class <span class="ident">WeatherData</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>This class is used to get weather data from an API and parse it into a JSON format.
+It provides methods to retrieve various weather information such as current weather, predicted temperature,
+daily weather, and more.</p>
+<p>Initializes the WeatherData object by fetching weather data from the API and storing it as JSON.
+If the API request fails, the program exits with an error message.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WeatherData:
+    &#34;&#34;&#34;
+    This class is used to get weather data from an API and parse it into a JSON format.
+    It provides methods to retrieve various weather information such as current weather, predicted temperature,
+    daily weather, and more.
+    &#34;&#34;&#34;
+
+    API_URL = (&#39;https://api.open-meteo.com/v1/forecast?latitude=47.0667&amp;longitude=15.45&amp;current=temperature_2m,&#39;
+               &#39;relativehumidity_2m,apparent_temperature,weathercode,surface_pressure,&#39;
+               &#39;windspeed_10m&amp;hourly=visibility&amp;daily=weathercode,temperature_2m_max,temperature_2m_min,&#39;
+               &#39;apparent_temperature_max,apparent_temperature_min,sunrise,sunset,uv_index_max&amp;timezone=Europe%2FBerlin&#39;)
+    WEATHER_JSON = None
+
+    def __init__(self):
+        &#34;&#34;&#34;
+        Initializes the WeatherData object by fetching weather data from the API and storing it as JSON.
+        If the API request fails, the program exits with an error message.
+        &#34;&#34;&#34;
+        weather_data = httpx.get(self.API_URL)
+        self.forecast_model = WeatherModel()
+
+        if weather_data.status_code == 200:
+            self.WEATHER_JSON = weather_data.json()
+        else:
+            sys.exit(&#34;Error: Could not get weather data from API&#34;)
+
+    def get_units(self):
+        &#34;&#34;&#34;
+        Retrieves the units of measurement for the weather data from the API.
+
+        Returns:
+            dict: A dictionary containing the units of measurement.
+        &#34;&#34;&#34;
+        units = self.WEATHER_JSON[&#39;current_units&#39;]
+        visibility = self.WEATHER_JSON[&#39;hourly_units&#39;][&#39;visibility&#39;]
+        units[&#39;visibility&#39;] = visibility
+        return units
+
+    def find_closest_time_index(self):
+        &#34;&#34;&#34;
+        Finds the index of the closest time in the API data to the current time.
+
+        Returns:
+            int: The index of the closest time.
+        &#34;&#34;&#34;
+        current_datetime = datetime.now()
+        json_dates = [datetime.fromisoformat(date) for date in self.WEATHER_JSON[&#39;hourly&#39;][&#39;time&#39;]]
+        time_diffs = [abs(date - current_datetime) for date in json_dates]
+
+        return time_diffs.index(min(time_diffs))
+
+    def get_current_visibility(self):
+        &#34;&#34;&#34;
+        Retrieves the current visibility from the API data.
+
+        Returns:
+            float: The current visibility in kilometers.
+        &#34;&#34;&#34;
+        return self.WEATHER_JSON[&#39;hourly&#39;][&#39;visibility&#39;][self.find_closest_time_index()] / 1000
+
+    def get_predicted_temp(self):
+        &#34;&#34;&#34;
+        Predicts the temperature for the current day using a machine learning model.
+
+        Returns:
+            float: The predicted temperature.
+        &#34;&#34;&#34;
+        max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_max&#39;][0]
+        min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_min&#39;][0]
+
+        apparent_max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_max&#39;][0]
+        apparent_min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_min&#39;][0]
+
+        uv_index = self.WEATHER_JSON[&#39;daily&#39;][&#39;uv_index_max&#39;][0]
+
+        return self.forecast_model.predict(
+            max_temp, min_temp, uv_index, apparent_max_temp, apparent_min_temp
+        )
+
+    def get_current_weather(self):
+        &#34;&#34;&#34;
+        Retrieves the current weather data.
+
+        Returns:
+            dict: A dictionary containing the current weather information.
+        &#34;&#34;&#34;
+        current_weather = self.WEATHER_JSON[&#39;current&#39;]
+        weather_units = self.get_units()
+
+        sunrise_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunrise&#39;][0]).strftime(&#39;%H:%M&#39;)
+        sunset_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunset&#39;][0]).strftime(&#39;%H:%M&#39;)
+
+        return {
+            &#34;temperature&#34;: str(round(current_weather[&#34;temperature_2m&#34;], 1))
+                           + &#39; &#39;
+                           + weather_units[&#34;temperature_2m&#34;],
+            &#34;predicted_temp&#34;: self.get_predicted_temp(),
+            &#34;humidity&#34;: str(current_weather[&#34;relativehumidity_2m&#34;])
+                        + &#39; &#39;
+                        + weather_units[&#34;relativehumidity_2m&#34;],
+            &#34;feels_like&#34;: str(round(current_weather[&#34;apparent_temperature&#34;], 1))
+                          + &#39; &#39;
+                          + weather_units[&#34;apparent_temperature&#34;],
+            &#34;weathercode&#34;: current_weather[&#34;weathercode&#34;],
+            &#34;pressure&#34;: str(current_weather[&#34;surface_pressure&#34;])
+                        + &#39; &#39;
+                        + weather_units[&#34;surface_pressure&#34;],
+            &#34;windspeed&#34;: str(current_weather[&#34;windspeed_10m&#34;])
+                         + &#39; &#39;
+                         + weather_units[&#34;windspeed_10m&#34;],
+            &#34;visibility&#34;: f&#39;{str(self.get_current_visibility())} k&#39;
+                          + weather_units[&#34;visibility&#34;],
+            &#34;sunrise&#34;: sunrise_time,
+            &#34;sunset&#34;: sunset_time,
+        }
+
+    def get_daily_weather(self, day):
+        &#34;&#34;&#34;
+        Retrieves the weather data for a specific day.
+
+        Parameters:
+            day (int): The index of the day.
+
+        Returns:
+            dict: A dictionary containing the weather information for the specified day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        avg_temp = (day_weather[&#34;temperature_2m_min&#34;][day] + day_weather[&#34;temperature_2m_max&#34;][day]) / 2
+        avg_feels = (day_weather[&#34;apparent_temperature_min&#34;][day] + day_weather[&#34;apparent_temperature_max&#34;][day]) / 2
+
+        predicted_temp = self.forecast_model.predict(
+            day_weather[&#34;temperature_2m_max&#34;][day],
+            day_weather[&#34;temperature_2m_min&#34;][day],
+            day_weather[&#34;uv_index_max&#34;][day],
+            day_weather[&#34;apparent_temperature_max&#34;][day],
+            day_weather[&#34;apparent_temperature_min&#34;][day]
+        )
+        return {
+            &#34;day_name&#34;: datetime.strptime(
+                day_weather[&#34;time&#34;][day], &#34;%Y-%m-%d&#34;
+            ).strftime(&#34;%A&#34;),
+            &#34;weathercode&#34;: day_weather[&#34;weathercode&#34;][day],
+            &#34;temperature&#34;: str(round(avg_temp, 2)),
+            &#34;predicted_temp&#34;: predicted_temp,
+            &#34;feels_like&#34;: str(round(avg_feels, 2)),
+        }
+
+    def get_daily_temperature(self):
+        &#34;&#34;&#34;
+        Retrieves the average temperature for the next 7 days.
+
+        Returns:
+            list: A list of average temperatures for each day.
+        &#34;&#34;&#34;
+        return self.format_temp_average(
+            &#34;temperature_2m_min&#34;, &#34;temperature_2m_max&#34;
+        )
+
+    def get_daily_feels_temp(self):
+        &#34;&#34;&#34;
+        Retrieves the average feels like temperature for the next 7 days.
+
+        Returns:
+            list: A list of average feels like temperatures for each day.
+        &#34;&#34;&#34;
+        return self.format_temp_average(
+            &#34;apparent_temperature_min&#34;, &#34;apparent_temperature_max&#34;
+        )
+
+    def format_temp_average(self, arg0, arg1):
+        &#34;&#34;&#34;
+        Formats the average temperature for a given range of days.
+
+        Parameters:
+            arg0 (str): The first parameter for calculating the average temperature.
+            arg1 (str): The second parameter for calculating the average temperature.
+
+        Returns:
+            list: A list of average temperatures for each day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        weekly_temperatures = []
+        for day in range(7):
+            avg_temp = (day_weather[arg0][day] + day_weather[arg1][day]) / 2
+            weekly_temperatures.append(round(avg_temp, 2))
+        return weekly_temperatures
+
+    def get_daily_predicted_temp(self):
+        &#34;&#34;&#34;
+        Retrieves the predicted temperature for the next 7 days.
+
+        Returns:
+            list: A list of predicted temperatures for each day.
+        &#34;&#34;&#34;
+        day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+        weekly_temperatures = []
+
+        for day in range(7):
+            predicted_temp = self.forecast_model.predict(
+                day_weather[&#34;temperature_2m_max&#34;][day],
+                day_weather[&#34;temperature_2m_min&#34;][day],
+                day_weather[&#34;uv_index_max&#34;][day],
+                day_weather[&#34;apparent_temperature_max&#34;][day],
+                day_weather[&#34;apparent_temperature_min&#34;][day]
+            )
+            weekly_temperatures.append(predicted_temp)
+        return weekly_temperatures</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="project.weather_data.WeatherData.API_URL"><code class="name">var <span class="ident">API_URL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="project.weather_data.WeatherData.WEATHER_JSON"><code class="name">var <span class="ident">WEATHER_JSON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="project.weather_data.WeatherData.find_closest_time_index"><code class="name flex">
+<span>def <span class="ident">find_closest_time_index</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds the index of the closest time in the API data to the current time.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>The index of the closest time.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_closest_time_index(self):
+    &#34;&#34;&#34;
+    Finds the index of the closest time in the API data to the current time.
+
+    Returns:
+        int: The index of the closest time.
+    &#34;&#34;&#34;
+    current_datetime = datetime.now()
+    json_dates = [datetime.fromisoformat(date) for date in self.WEATHER_JSON[&#39;hourly&#39;][&#39;time&#39;]]
+    time_diffs = [abs(date - current_datetime) for date in json_dates]
+
+    return time_diffs.index(min(time_diffs))</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.format_temp_average"><code class="name flex">
+<span>def <span class="ident">format_temp_average</span></span>(<span>self, arg0, arg1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Formats the average temperature for a given range of days.</p>
+<h2 id="parameters">Parameters</h2>
+<p>arg0 (str): The first parameter for calculating the average temperature.
+arg1 (str): The second parameter for calculating the average temperature.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A list of average temperatures for each day.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def format_temp_average(self, arg0, arg1):
+    &#34;&#34;&#34;
+    Formats the average temperature for a given range of days.
+
+    Parameters:
+        arg0 (str): The first parameter for calculating the average temperature.
+        arg1 (str): The second parameter for calculating the average temperature.
+
+    Returns:
+        list: A list of average temperatures for each day.
+    &#34;&#34;&#34;
+    day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+    weekly_temperatures = []
+    for day in range(7):
+        avg_temp = (day_weather[arg0][day] + day_weather[arg1][day]) / 2
+        weekly_temperatures.append(round(avg_temp, 2))
+    return weekly_temperatures</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_current_visibility"><code class="name flex">
+<span>def <span class="ident">get_current_visibility</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the current visibility from the API data.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>The current visibility in kilometers.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_current_visibility(self):
+    &#34;&#34;&#34;
+    Retrieves the current visibility from the API data.
+
+    Returns:
+        float: The current visibility in kilometers.
+    &#34;&#34;&#34;
+    return self.WEATHER_JSON[&#39;hourly&#39;][&#39;visibility&#39;][self.find_closest_time_index()] / 1000</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_current_weather"><code class="name flex">
+<span>def <span class="ident">get_current_weather</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the current weather data.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>A dictionary containing the current weather information.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_current_weather(self):
+    &#34;&#34;&#34;
+    Retrieves the current weather data.
+
+    Returns:
+        dict: A dictionary containing the current weather information.
+    &#34;&#34;&#34;
+    current_weather = self.WEATHER_JSON[&#39;current&#39;]
+    weather_units = self.get_units()
+
+    sunrise_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunrise&#39;][0]).strftime(&#39;%H:%M&#39;)
+    sunset_time = datetime.fromisoformat(self.WEATHER_JSON[&#39;daily&#39;][&#39;sunset&#39;][0]).strftime(&#39;%H:%M&#39;)
+
+    return {
+        &#34;temperature&#34;: str(round(current_weather[&#34;temperature_2m&#34;], 1))
+                       + &#39; &#39;
+                       + weather_units[&#34;temperature_2m&#34;],
+        &#34;predicted_temp&#34;: self.get_predicted_temp(),
+        &#34;humidity&#34;: str(current_weather[&#34;relativehumidity_2m&#34;])
+                    + &#39; &#39;
+                    + weather_units[&#34;relativehumidity_2m&#34;],
+        &#34;feels_like&#34;: str(round(current_weather[&#34;apparent_temperature&#34;], 1))
+                      + &#39; &#39;
+                      + weather_units[&#34;apparent_temperature&#34;],
+        &#34;weathercode&#34;: current_weather[&#34;weathercode&#34;],
+        &#34;pressure&#34;: str(current_weather[&#34;surface_pressure&#34;])
+                    + &#39; &#39;
+                    + weather_units[&#34;surface_pressure&#34;],
+        &#34;windspeed&#34;: str(current_weather[&#34;windspeed_10m&#34;])
+                     + &#39; &#39;
+                     + weather_units[&#34;windspeed_10m&#34;],
+        &#34;visibility&#34;: f&#39;{str(self.get_current_visibility())} k&#39;
+                      + weather_units[&#34;visibility&#34;],
+        &#34;sunrise&#34;: sunrise_time,
+        &#34;sunset&#34;: sunset_time,
+    }</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_daily_feels_temp"><code class="name flex">
+<span>def <span class="ident">get_daily_feels_temp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the average feels like temperature for the next 7 days.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A list of average feels like temperatures for each day.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_daily_feels_temp(self):
+    &#34;&#34;&#34;
+    Retrieves the average feels like temperature for the next 7 days.
+
+    Returns:
+        list: A list of average feels like temperatures for each day.
+    &#34;&#34;&#34;
+    return self.format_temp_average(
+        &#34;apparent_temperature_min&#34;, &#34;apparent_temperature_max&#34;
+    )</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_daily_predicted_temp"><code class="name flex">
+<span>def <span class="ident">get_daily_predicted_temp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the predicted temperature for the next 7 days.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A list of predicted temperatures for each day.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_daily_predicted_temp(self):
+    &#34;&#34;&#34;
+    Retrieves the predicted temperature for the next 7 days.
+
+    Returns:
+        list: A list of predicted temperatures for each day.
+    &#34;&#34;&#34;
+    day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+    weekly_temperatures = []
+
+    for day in range(7):
+        predicted_temp = self.forecast_model.predict(
+            day_weather[&#34;temperature_2m_max&#34;][day],
+            day_weather[&#34;temperature_2m_min&#34;][day],
+            day_weather[&#34;uv_index_max&#34;][day],
+            day_weather[&#34;apparent_temperature_max&#34;][day],
+            day_weather[&#34;apparent_temperature_min&#34;][day]
+        )
+        weekly_temperatures.append(predicted_temp)
+    return weekly_temperatures</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_daily_temperature"><code class="name flex">
+<span>def <span class="ident">get_daily_temperature</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the average temperature for the next 7 days.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>A list of average temperatures for each day.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_daily_temperature(self):
+    &#34;&#34;&#34;
+    Retrieves the average temperature for the next 7 days.
+
+    Returns:
+        list: A list of average temperatures for each day.
+    &#34;&#34;&#34;
+    return self.format_temp_average(
+        &#34;temperature_2m_min&#34;, &#34;temperature_2m_max&#34;
+    )</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_daily_weather"><code class="name flex">
+<span>def <span class="ident">get_daily_weather</span></span>(<span>self, day)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the weather data for a specific day.</p>
+<h2 id="parameters">Parameters</h2>
+<p>day (int): The index of the day.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>A dictionary containing the weather information for the specified day.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_daily_weather(self, day):
+    &#34;&#34;&#34;
+    Retrieves the weather data for a specific day.
+
+    Parameters:
+        day (int): The index of the day.
+
+    Returns:
+        dict: A dictionary containing the weather information for the specified day.
+    &#34;&#34;&#34;
+    day_weather = self.WEATHER_JSON[&#39;daily&#39;]
+    avg_temp = (day_weather[&#34;temperature_2m_min&#34;][day] + day_weather[&#34;temperature_2m_max&#34;][day]) / 2
+    avg_feels = (day_weather[&#34;apparent_temperature_min&#34;][day] + day_weather[&#34;apparent_temperature_max&#34;][day]) / 2
+
+    predicted_temp = self.forecast_model.predict(
+        day_weather[&#34;temperature_2m_max&#34;][day],
+        day_weather[&#34;temperature_2m_min&#34;][day],
+        day_weather[&#34;uv_index_max&#34;][day],
+        day_weather[&#34;apparent_temperature_max&#34;][day],
+        day_weather[&#34;apparent_temperature_min&#34;][day]
+    )
+    return {
+        &#34;day_name&#34;: datetime.strptime(
+            day_weather[&#34;time&#34;][day], &#34;%Y-%m-%d&#34;
+        ).strftime(&#34;%A&#34;),
+        &#34;weathercode&#34;: day_weather[&#34;weathercode&#34;][day],
+        &#34;temperature&#34;: str(round(avg_temp, 2)),
+        &#34;predicted_temp&#34;: predicted_temp,
+        &#34;feels_like&#34;: str(round(avg_feels, 2)),
+    }</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_predicted_temp"><code class="name flex">
+<span>def <span class="ident">get_predicted_temp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Predicts the temperature for the current day using a machine learning model.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>The predicted temperature.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_predicted_temp(self):
+    &#34;&#34;&#34;
+    Predicts the temperature for the current day using a machine learning model.
+
+    Returns:
+        float: The predicted temperature.
+    &#34;&#34;&#34;
+    max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_max&#39;][0]
+    min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;temperature_2m_min&#39;][0]
+
+    apparent_max_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_max&#39;][0]
+    apparent_min_temp = self.WEATHER_JSON[&#39;daily&#39;][&#39;apparent_temperature_min&#39;][0]
+
+    uv_index = self.WEATHER_JSON[&#39;daily&#39;][&#39;uv_index_max&#39;][0]
+
+    return self.forecast_model.predict(
+        max_temp, min_temp, uv_index, apparent_max_temp, apparent_min_temp
+    )</code></pre>
+</details>
+</dd>
+<dt id="project.weather_data.WeatherData.get_units"><code class="name flex">
+<span>def <span class="ident">get_units</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves the units of measurement for the weather data from the API.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>A dictionary containing the units of measurement.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_units(self):
+    &#34;&#34;&#34;
+    Retrieves the units of measurement for the weather data from the API.
+
+    Returns:
+        dict: A dictionary containing the units of measurement.
+    &#34;&#34;&#34;
+    units = self.WEATHER_JSON[&#39;current_units&#39;]
+    visibility = self.WEATHER_JSON[&#39;hourly_units&#39;][&#39;visibility&#39;]
+    units[&#39;visibility&#39;] = visibility
+    return units</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<header>
+<h1>Weather Data Graz</h1>
+<img class="homelink" src="../../logo.png" alt="App Logo">
+<a class="homelink" href="../index.html"> << Modules list</a>
+<a class="homelink" href="https://www.kaggle.com/datasets/benben377/weather-data-graz/code">&#x1f517;Kaggle Machine Learning Model</a>
+</header>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="project" href="index.html">project</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="project.weather_data.WeatherData" href="#project.weather_data.WeatherData">WeatherData</a></code></h4>
+<ul class="">
+<li><code><a title="project.weather_data.WeatherData.API_URL" href="#project.weather_data.WeatherData.API_URL">API_URL</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.WEATHER_JSON" href="#project.weather_data.WeatherData.WEATHER_JSON">WEATHER_JSON</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.find_closest_time_index" href="#project.weather_data.WeatherData.find_closest_time_index">find_closest_time_index</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.format_temp_average" href="#project.weather_data.WeatherData.format_temp_average">format_temp_average</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_current_visibility" href="#project.weather_data.WeatherData.get_current_visibility">get_current_visibility</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_current_weather" href="#project.weather_data.WeatherData.get_current_weather">get_current_weather</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_daily_feels_temp" href="#project.weather_data.WeatherData.get_daily_feels_temp">get_daily_feels_temp</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_daily_predicted_temp" href="#project.weather_data.WeatherData.get_daily_predicted_temp">get_daily_predicted_temp</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_daily_temperature" href="#project.weather_data.WeatherData.get_daily_temperature">get_daily_temperature</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_daily_weather" href="#project.weather_data.WeatherData.get_daily_weather">get_daily_weather</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_predicted_temp" href="#project.weather_data.WeatherData.get_predicted_temp">get_predicted_temp</a></code></li>
+<li><code><a title="project.weather_data.WeatherData.get_units" href="#project.weather_data.WeatherData.get_units">get_units</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
